@@ -44,27 +44,17 @@
         #home {
             position: relative;
             height: 100vh;
-            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+            background: url('background-image.jpg') no-repeat center center/cover;
         }
         .overlay {
-            position: relative;
+            position: absolute;
             text-align: center;
         }
         .overlay img {
-            width: 200px;
-            margin-bottom: 20px;
+            width: 300px;
         }
         h1 {
             font-size: 48px;
@@ -72,6 +62,15 @@
         }
         section {
             padding: 100px 20px;
+            position: relative;
+        }
+        .content-box {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
         }
         footer {
             background-color: #1e1e1e;
@@ -93,10 +92,6 @@
     </header>
     
     <section id="home">
-        <video autoplay loop muted>
-            <source src="background-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
         <div class="overlay">
             <img src="logo.png" alt="Amplified Dreamers Logo">
             <h1>Welcome to Amplified Dreamers</h1>
@@ -104,18 +99,24 @@
     </section>
 
     <section id="team">
-        <h2>Our Team</h2>
-        <p>Meet the talented musicians behind Amplified Dreamers.</p>
+        <div class="content-box">
+            <h2>Our Team</h2>
+            <p>Meet the talented musicians behind Amplified Dreamers.</p>
+        </div>
     </section>
 
     <section id="about">
-        <h2>Who Are We?</h2>
-        <p>Amplified Dreamers is a band that plays metal, rock, pop, and more.</p>
+        <div class="content-box">
+            <h2>Who Are We?</h2>
+            <p>Amplified Dreamers is a band that plays metal, rock, pop, and more.</p>
+        </div>
     </section>
 
     <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email us at: <a href="mailto:contact@amplifieddreamers.com">contact@amplifieddreamers.com</a></p>
+        <div class="content-box">
+            <h2>Contact Us</h2>
+            <p>Email us at: <a href="mailto:contact@amplifieddreamers.com">contact@amplifieddreamers.com</a></p>
+        </div>
     </section>
 
     <footer>

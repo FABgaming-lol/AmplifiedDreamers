@@ -41,24 +41,15 @@
         nav ul li a:hover {
             color: #f39c12;
         }
-        #home {
-            position: relative;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: url('background-image.jpg') no-repeat center center/cover;
-        }
-        .overlay {
-            position: absolute;
-            text-align: center;
-        }
-        .overlay img {
-            width: 300px;
-        }
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
+        #background-container {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 400px; /* Adjust size as needed */
+            height: 400px; /* Adjust size as needed */
+            background: url('square-background.png') no-repeat center center/cover;
+            z-index: -1;
         }
         section {
             padding: 100px 20px;
@@ -80,6 +71,8 @@
     </style>
 </head>
 <body>
+    <div id="background-container"></div>
+    
     <header>
         <nav>
             <ul>
@@ -92,8 +85,7 @@
     </header>
     
     <section id="home">
-        <div class="overlay">
-            <img src="logo.png" alt="Amplified Dreamers Logo">
+        <div class="content-box">
             <h1>Welcome to Amplified Dreamers</h1>
         </div>
     </section>
